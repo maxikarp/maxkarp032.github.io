@@ -1,0 +1,88 @@
+/*
+#name{
+	font-family: Helvetica;
+	font-weight: bold;
+	font-colour: black;
+	text-align: center;
+	letter-spacing: 6px;
+}
+*/
+
+body{
+	margin: 0px;
+}
+
+.container{
+	position: relative;
+}
+
+.centered {
+	font-family: Futura;
+	font-weight: bold;
+	font-size: 56px;
+	color: #ffe066;
+	letter-spacing: 8px;
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+img{
+	max-width: 100%;
+	z-index: -1;
+}
+
+.headerText{
+	font-family: Helvetica;
+	font-weight: bold;
+}
+
+.info{
+
+	margin: 20px;
+	border-left: 4px solid #ffd11a;
+	padding: 5px;
+
+	background: #ffe680;
+
+	float: left;
+	width: 33%;
+}
+
+/* Clear floats after the columns */
+.row:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+a{
+	font-size: 16px;
+	font-family: Arial;
+}
+
+a:link {
+	color: blue;
+	text-decoration: none;
+}
+
+a:visited {
+	color: DarkBlue;
+	text-decoration: none;
+}
+
+a:hover {
+	color: Green;
+	text-decoration: underline;
+}
+
+a:active {
+	color: DarkBlue;
+	text-decoration: underline;
+}
+
+#address{
+	position: center;
+	color: gray;
+}
