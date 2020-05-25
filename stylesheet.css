@@ -12,7 +12,9 @@
 }
 
 #ImageLink{
-	margin: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 	width: auto;
 	padding:10px;
 }
