@@ -4,13 +4,13 @@
 }
 
 #TextLink{
-	margin: center;
+	margin: auto;
 	width: 50%;
 	padding:10px;
 }
 
 #ImageLink{
-	margin: center;
+	margin: auto;
 	width: auto;
 	padding:10px;
 }
