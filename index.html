@@ -20,22 +20,63 @@
 
   <div id="ImageLink">
 
-  <a href="https://www.urbanoutfitters.com/en-ca/">
-    <img src="uowebsite.JPG" alt="Urban Outfitters Webiste Home Page" style="width: 50%;height: 50%;">
-  </a>
+    <a href="https://www.urbanoutfitters.com/en-ca/">
+      <img src="uowebsite.JPG" alt="Urban Outfitters Webiste Home Page">
+    </a>
 
-</div>
+  </div id="form">
 
-<form>
+    <form>
+      <div class="q">
+        1. What were your first impressions of this website's design?<br>
+        <textarea rows="5", cols="100"></textarea><br>
+      </div>
 
+      <div class="q">
+        2. Which parts of the website design did you enjoy the most? Select up to 3 options.<br>
+        <input type="checkbox" name="color" value="color">The color palette<br>
+        <input type="checkbox" name="pictures" value="pictures">The pictures<br>
+        <input type="checkbox" name="layout" value="layout">The layout<br>
+        <input type="checkbox" name="font" value="font">The text font<br>
+      </div>
 
+      <div class="q">
+      3. Evaluate the following statement: this website is easy to use:<br>
+        <input type="radio" name="ease_of_use" value="sdis">Strongly Disagree  
+        <input type="radio" name="ease_of_use" value="dis">Disagree  
+        <input type="radio" name="ease_of_use" value="no_op">No Opinion  
+        <input type="radio" name="ease_of_use" value="agr">Agree  
+        <input type="radio" name="ease_of_use" value="sagr">Strongly Agree <br>
+      </div>
 
-</form>
+      <div class="q">
+        4. Would you recommend this website to a friend?<br>
+        <input type="radio" name="recommend" value="yes">Yes<br>
+        <input type="radio" name="recommend" value="no">No<br>
+        <input type="radio" name="recommend" value="maybe">Maybe<br>
+      </div>
 
+      <div class="q">
+        5. Which browser are you using to access this website?<br>
+        <select name="Browser">
+          <option value="Safari" seleted="selected">Safari</option>
+          <option value="Chrome">Google Chrome</option>
+          <option value="IE">Internet Explorer</option>
+          <option value="edge">Microsoft Edge</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
 
-<footer>
-  <p>Website Designed by Maxim Karpov</p>
-</footer>
+      <div class="q">
+        6. Please feel free to leave a comment below:<br>
+        <textarea rows="5", cols="100"></textarea><br>
+      </div>
+
+    </form>
+
+  <footer>
+    <p>Website Designed by Maxim Karpov</p>
+  </footer>
 
 </body>
 
