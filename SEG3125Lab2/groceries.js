@@ -31,7 +31,7 @@ var products = [
 		isOrganic: false
 	},
 	{
-		name: "Toamto",
+		name: "Tomato",
 		vegetarian: true,
 		glutenFree: true,
 		price: 1.00,
