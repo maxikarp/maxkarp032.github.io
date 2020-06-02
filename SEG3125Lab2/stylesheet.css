@@ -1,5 +1,9 @@
 /* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
 
+h1{
+	font-family: Arial;
+}
+
 /* Style the tab */
 .tab {
   overflow: hidden;

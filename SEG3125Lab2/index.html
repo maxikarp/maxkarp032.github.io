@@ -2,10 +2,14 @@
 <html>
 <head>
 	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<title>The All Food Store</title>
 	<link href="stylesheet.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
+	<div class="name">
+		<h1>The All Food Store</h1>
+	</div>
 
 <!-- Tab links, each one with an onclick event associated with it -->
 <div class="tab">
@@ -22,7 +26,8 @@
 	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
 	<option value=""></option>
 	<option value="Vegetarian">Vegetarian</option>
-    <option value="GlutenFree">GlutenFree</option>
+    <option value="GlutenFree">Gluten Free</option>
+    <option value="GlutenFreeAndVeg">Gluten Free and Vegeterian</option>
     <option value="None">None</option>
 	</select>
 </div>
