@@ -31,7 +31,7 @@ var products = [
 		isOrganic: false
 	},
 	{
-		name: "Toamtoe",
+		name: "Toamto",
 		vegetarian: true,
 		glutenFree: true,
 		price: 1.00,
@@ -83,18 +83,30 @@ function restrictListProducts(prods, restriction) {
 	let product_names = [];
 	for (let i=0; i<prods.length; i+=1) {
 		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
-			product_names.push(prods[i].name);
+			product_names.push({name: prods[i].name, price: prods[i].price.toString()});//appending a json into the list
 		}
 		else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true)){
-			product_names.push(prods[i].name);
+			product_names.push({name: prods[i].name, price: prods[i].price.toString()});
 		}
-		else if((restriction == "GlutenFreeAndVeg") && (prods[i].glutenFree == true) && (prods[i].vegetarian == true)){
-			product_names.push(prods[i].name);
+		else if ((restriction == "GlutenFreeAndVeg") && (prods[i].glutenFree == true) && (prods[i].vegetarian == true)){
+			product_names.push({name: prods[i].name, price: prods[i].price.toString()});
+		}		
+		else if ((restriction == "VegetarianAndOrg") && (prods[i].vegetarian == true) && (prods[i].isOrganic == true)){
+			product_names.push({name: prods[i].name, price: prods[i].price.toString()});
+		}
+		else if ((restriction == "GlutenFreeAndOrg") && (prods[i].glutenFree == true) && (prods[i].isOrganic == true)){
+			product_names.push({name: prods[i].name, price: prods[i].price.toString()});
+		}
+		else if((restriction == "GlutenFreeAndVegAndOrg") && (prods[i].glutenFree == true) && (prods[i].vegetarian == true) && (prods[i].isOrganic == true)){
+			product_names.push({name: prods[i].name, price: prods[i].price.toString()});
 		}
 		else if (restriction == "None"){
-			product_names.push(prods[i].name);
+			product_names.push({name: prods[i].name, price: prods[i].price.toString()});
 		}
 	}
+
+	//sort the products using javascript sort
+	product_names.sort((a,b) => (a.price > b.price) ? 1: -1) //means in smallest to largest order
 	return product_names;
 }
 
