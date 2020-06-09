@@ -73,6 +73,12 @@ var products = [
 		isOrganic: true
 	}
 ];
+
+
+//inspired by: https://www.javascripttutorial.net/javascript-dom/javascript-checkbox/
+function getDiet(){
+
+}
 	
 
 

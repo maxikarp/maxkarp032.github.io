@@ -22,7 +22,15 @@
 <div id="Client" class="tabcontent">
   <h3>Client Information</h3>
   <p>Tell us a bit about you.</p>
-	Choose a Category:
+	Select which type of food you would like to purchase:<br>
+	<input type="checkbox" name="diet" value="Vegetarian"> Vegetarian<br>
+	<input type="checkbox" name="diet" value="GlutenFree"> Gluten Free<br>
+	<input type="checkbox" name="diet" value="Organic"> Organic<br>
+	<p>Please press "See Available Food" once you have made your selection(s).</p>
+	<button id="getFood" type="button" class="block" onclick="getDiet()">
+		See Available Food
+	</button>
+	<!--
 	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
 	<option value=""></option>
 	<option value="Vegetarian">Vegetarian</option>
@@ -33,6 +41,7 @@
     <option value="GlutenFreeAndVegAndOrg">Gluten Free, Vegeterian and Organic</option>
     <option value="None">None</option>
 	</select>
+	-->
 
 </div>
 
