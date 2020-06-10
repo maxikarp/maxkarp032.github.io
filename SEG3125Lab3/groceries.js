@@ -7,6 +7,7 @@ var products = [
 		vegetarian: true,
 		glutenFree: true,
 		price: 1.99,
+		pic:"/foodAssets/Brocoli.jpg",
 		isOrganic: true
 	},
 	{
@@ -14,6 +15,7 @@ var products = [
 		vegetarian: true,
 		glutenFree: false,
 		price: 2.35,
+		pic:"/foodAssets/Bread.jpg",
 		isOrganic: false
 	},
 	{
@@ -21,6 +23,7 @@ var products = [
 		vegetarian: false,
 		glutenFree: true,
 		price: 10.00,
+		pic:"/foodAssets/Salmon.jpg",
 		isOrganic: true
 	},
 	{
@@ -28,6 +31,7 @@ var products = [
 		vegetarian: false,
 		glutenFree: true,
 		price: 13.00,
+		pic:"/foodAssets/Steak.jpg",
 		isOrganic: false
 	},
 	{
@@ -35,6 +39,7 @@ var products = [
 		vegetarian: true,
 		glutenFree: true,
 		price: 1.00,
+		pic:"/foodAssets/Tomato.jpg",
 		isOrganic: true
 	},
 	{
@@ -42,13 +47,15 @@ var products = [
 		vegetarian: true,
 		glutenFree: false,
 		price: 0.50,
+		pic:"/foodAssets/Bagel.jpg",
 		isOrganic: false
 	},
 	{
-		name: "Cream cheese",
+		name: "Cream Cheese",
 		vegetarian: true,
 		glutenFree: true,
 		price: 3.00,
+		pic:"/foodAssets/CreamCheese.jpg",
 		isOrganic: false
 	},
 	{
@@ -56,6 +63,7 @@ var products = [
 		vegetarian: true,
 		glutenFree: true,
 		price: 6.00,
+		pic:"/foodAssets/Rice.jpg",
 		isOrganic: false
 	},
 	{
@@ -63,6 +71,7 @@ var products = [
 		vegetarian: true,
 		glutenFree: false,
 		price: 6.00,
+		pic:"/foodAssets/Pasta.jpg",
 		isOrganic: false
 	},
 	{
@@ -70,6 +79,7 @@ var products = [
 		vegetarian: true,
 		glutenFree: true,
 		price: 0.89,
+		pic:"/foodAssets/Banana.jpg",
 		isOrganic: true
 	}
 ];
@@ -77,7 +87,12 @@ var products = [
 
 //inspired by: https://www.javascripttutorial.net/javascript-dom/javascript-checkbox/
 function getDiet(){
-
+	let selections = [];
+	const checked = document.querySelectorAll('input[name="diet"]:checked');
+	 checked.forEach((checkbox) => {
+        selections.push(checkbox.value);
+    });
+	return selections;
 }
 	
 
@@ -85,28 +100,32 @@ function getDiet(){
 // given restrictions provided, make a reduced list of products
 // prices should be included in this list, as well as a sort based on price
 
-function restrictListProducts(prods, restriction) {
+function restrictListProducts(prods) {
+
+	var restrict = getDiet();
+	restrict.toString();
+
 	let product_names = [];
 	for (let i=0; i<prods.length; i+=1) {
-		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
+		if ((restrict == "Vegetarian") && (prods[i].vegetarian == true)){
 			product_names.push({name: prods[i].name, price: prods[i].price.toString()});//appending a json into the list
 		}
-		else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true)){
+		else if ((restrict == "GlutenFree") && (prods[i].glutenFree == true)){
 			product_names.push({name: prods[i].name, price: prods[i].price.toString()});
 		}
-		else if ((restriction == "GlutenFreeAndVeg") && (prods[i].glutenFree == true) && (prods[i].vegetarian == true)){
+		else if ((restrict == "Vegetarian,GlutenFree") && (prods[i].glutenFree == true) && (prods[i].vegetarian == true)){
 			product_names.push({name: prods[i].name, price: prods[i].price.toString()});
 		}		
-		else if ((restriction == "VegetarianAndOrg") && (prods[i].vegetarian == true) && (prods[i].isOrganic == true)){
+		else if ((restrict == "Vegetarian,Organic") && (prods[i].vegetarian == true) && (prods[i].isOrganic == true)){
 			product_names.push({name: prods[i].name, price: prods[i].price.toString()});
 		}
-		else if ((restriction == "GlutenFreeAndOrg") && (prods[i].glutenFree == true) && (prods[i].isOrganic == true)){
+		else if ((restrict == "GlutenFree,Organic") && (prods[i].glutenFree == true) && (prods[i].isOrganic == true)){
 			product_names.push({name: prods[i].name, price: prods[i].price.toString()});
 		}
-		else if((restriction == "GlutenFreeAndVegAndOrg") && (prods[i].glutenFree == true) && (prods[i].vegetarian == true) && (prods[i].isOrganic == true)){
+		else if((restrict == "Vegetarian,GlutenFree,Organic") && (prods[i].glutenFree == true) && (prods[i].vegetarian == true) && (prods[i].isOrganic == true)){
 			product_names.push({name: prods[i].name, price: prods[i].price.toString()});
 		}
-		else if (restriction == "None"){
+		else if (restrict == ""){
 			product_names.push({name: prods[i].name, price: prods[i].price.toString()});
 		}
 	}
