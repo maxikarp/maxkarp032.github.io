@@ -1,0 +1,168 @@
+<!-- This file contains many elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+
+<!-- Images source: -->
+<!-- jule.jpg taken from https://www.freepik.com/premium-vector/cartoon-successful-hairdresser_3951066.htm -->
+<!-- Erwind.jpb https://www.kijiji.ca/v-construction-trades-jobs/winnipeg/bicycle-mechanic/1499188319 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- The head should contain an appropriate title for your site -->
+<head>
+    <title>Fine Line Salon</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+
+    <!-- Your own additional style sheet -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+
+    <!-- Medium size container, padding 3, margins 3, background dark, text is white -->
+    <!-- Should show the name of your company with an image or logo -->
+    <!-- Bootstrap has its own font for H1, H2, p, etc.  -->
+    <!-- Look in BS4 Typography https://www.w3schools.com/bootstrap4/bootstrap_typography.asp -->
+    <!-- Use your own CSS file to change those fonts if they do not correspond to your company's look -->
+    <div class="container-md p-3 my-3 border bg-dark text-white">
+        <h1>Welcome to Fine Line Salon</h1>
+        <p>Where Harry "Styles" your hair!</p>
+    </div>
+
+
+    <!-- When you have messages to tell, remember that center align is not always the best choice -->
+    <div class="container-md p-3 my-3 border bg-light text-dark">
+        <h2>Let us tell you about our expertise:</h2>
+        <h4 class="text-center">Since 1999, we've been taking care of people's scalps!</h4>
+        <p>Come visit us, and get you hair changed up. A fresh cut will always make you feel better about yourself...and we can fix your "COVID cuts."</p>
+
+    </div>
+
+
+
+    <!-- Presenting the staff with cards: https://www.w3schools.com/bootstrap4/bootstrap_cards.asp -->
+    <!-- Card columns allows multiple cards next to each other -->
+    <!-- The first card's button doesn't go anywhere, it could be a modal --> 
+    <!-- My second card limits the information seen and uses collapsible to show more -->
+    <div class="container p-3">
+        <h2>Meet our hairdressers</h2>
+        <div class="card-columns">
+            <div class="card bg-light" style="width:200px">
+                <img class="card-img-top" src="images/harry.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Harry Styles</h4>
+                    <p class="card-text">Harry has had gorgeous hair for AGES. He's certainly an expert.</p>
+                    <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+            </div>
+            <div class="card bg-light" style="width:200px">
+                <img class="card-img-top" src="images/niall.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Niall Horan</h4>
+                    <p class="card-text">A Harvard graduate, Niall is great at giving brazilian blow outs.</p>
+                    <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+            </div>
+            <div class="card bg-light" style="width:200px">
+                <img class="card-img-top" src="images/zayn.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Zayn Malik</h4>
+                    <p class="card-text">A bandcamp dropout, Zayn is our favourite colorist.</p>
+                    <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Collapsible with multiple items - accordion -->
+    <!-- https://www.w3schools.com/bootstrap4/bootstrap_collapse.asp -->
+    <!-- As we want to do a vertical navigation better suited for mobile design, an accordion pattern -->
+    <!-- could work well.  You can use other patterns too.  This is just an example. -->
+    <div class="container">
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#collapseService">Choose a service</a>
+                </div>
+                <div id="collapseService" class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+                            <div class="container">
+                            <h2>Haircut Services!</h2>
+                            <p>Here is a small selection of what we can do:</p>            
+                            <table class="table table-active table-hover">
+                                <thead>
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Haircut</td>
+                                    <td>Need to take a few inches off of your hair? Got some split ends? We can chop em off!</td>
+                                </tr>
+                                <tr>
+                                    <td>Drying</td>
+                                    <td>If you get caught in the rain, or just get out of the shower and get lazy? We can dry your hair lickity-split.</td>
+                                </tr>
+                                <tr>
+                                    <td>Coloring</td>
+                                    <td>Get in touch with Zayn to change the color of your hair to match your mood.</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choose a date</a>
+                </div>
+                <div id="collapseDate" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>Which date would you like to set your appointment to?</p>
+                        <!-- Bootstrap has various input components. Some examples are given here: -->
+                        <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
+                        <div class="form-group row">
+                            <label for="dateTimeInput" class="col-2 col-form-label">Date and time</label>
+                            <div class="col-10">
+                                <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="dateTimeInput">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Your info</a>
+                </div>
+                <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>Please enter your information so we can contact you:</p>
+                        <form>
+                              <label for="fname">First name:</label>
+                              <input type="text" id="fname" name="fname"><br>
+                              <label for="lname">Last name:</label>
+                              <input type="text" id="lname" name="lname"><br>
+                              <label for="lname">Email address:</label>
+                              <input type="text" id="email" name="email"><br>
+                              <label for="lname">Phone Number:</label>
+                              <input type="text" id="phone" name="phone"><br>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
