@@ -18,10 +18,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>  
+
+    <script>
+        $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 
     <!-- Your own additional style sheet -->
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
 
@@ -149,20 +155,31 @@
                     <div class="card-body">
                         <p>Please enter your information so we can contact you:</p>
                         <form>
-                              <label for="fname">First name:</label>
-                              <input type="text" id="fname" name="fname"><br>
-                              <label for="lname">Last name:</label>
-                              <input type="text" id="lname" name="lname"><br>
-                              <label for="lname">Email address:</label>
-                              <input type="text" id="email" name="email"><br>
-                              <label for="lname">Phone Number:</label>
-                              <input type="text" id="phone" name="phone"><br>
+                            <label for="fname">First name:</label><br>
+                            <input type="text" id="fname" name="fname"><br>
+                            <label for="lname">Last name:</label><br>
+                            <input type="text" id="lname" name="lname"><br><br>
+                            <label for="lname">Email address:</label>
+                            <input type="text" id="email" name="email"><br><br>
+                            <label for="lname">Phone Number:</label>
+                            <input type="text" id="phone" name="phone" size="14" placeholder="XXX-XXX-XXXX"><br><br>
+                            <label for="lname">Credit Card Number:</label>
+                            <input 
+                                type="text" 
+                                id="creditCard" 
+                                name="creditCard" 
+                                size="23" 
+                                placeholder="XXXX-XXXX-XXXX-XXXX"
+                                data-toggle="tooltip"
+                                data-placement="right"
+                                title="This is for the cancelation fee of 15$."><br>
+                            <input type="submit" value="Book" onclick="checkInputs()">
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 </body>
+<footer>Designed by Maxim Karpov</footer>
 </html>
