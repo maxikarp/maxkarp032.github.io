@@ -2,8 +2,7 @@
 <!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
 
 <!-- Images source: -->
-<!-- jule.jpg taken from https://www.freepik.com/premium-vector/cartoon-successful-hairdresser_3951066.htm -->
-<!-- Erwind.jpb https://www.kijiji.ca/v-construction-trades-jobs/winnipeg/bicycle-mechanic/1499188319 -->
+<!-- icons for last section provided by my classmate skyla -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,11 +18,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>  
+    <script src="main.js"></script>
 
     <script>
         $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();
+            $('[data-toggle="tooltip"]').tooltip();
         });
+
+        $(document).ready(function(){
+            $("#datepicker").datepicker();
+        });
+
     </script>
 
     <!-- Your own additional style sheet -->
@@ -66,7 +71,7 @@
                 <div class="card-body">
                     <h4 class="card-title">Harry Styles</h4>
                     <p class="card-text">Harry has had gorgeous hair for AGES. He's certainly an expert.</p>
-                    <a href="#" class="btn btn-primary">See Profile</a>
+
                 </div>
             </div>
             <div class="card bg-light" style="width:200px">
@@ -74,7 +79,7 @@
                 <div class="card-body">
                     <h4 class="card-title">Niall Horan</h4>
                     <p class="card-text">A Harvard graduate, Niall is great at giving brazilian blow outs.</p>
-                    <a href="#" class="btn btn-primary">See Profile</a>
+
                 </div>
             </div>
             <div class="card bg-light" style="width:200px">
@@ -82,10 +87,37 @@
                 <div class="card-body">
                     <h4 class="card-title">Zayn Malik</h4>
                     <p class="card-text">A bandcamp dropout, Zayn is our favourite colorist.</p>
-                    <a href="#" class="btn btn-primary">See Profile</a>
+
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="container">
+        <h2>Haircut Services!</h2>
+        <p>Here is a small selection of what we can do:</p>            
+        <table class="table table-active table-hover">
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Haircut</td>
+                    <td>Need to take a few inches off of your hair? Got some split ends? We can chop em off!</td>
+                </tr>
+                <tr>
+                    <td>Drying</td>
+                    <td>If you get caught in the rain, or just get out of the shower and get lazy? We can dry your hair lickity-split.</td>
+                </tr>
+                <tr>
+                    <td>Coloring</td>
+                    <td>Get in touch with Zayn to change the color of your hair to match your mood.</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     
 
@@ -97,41 +129,44 @@
         <div id="accordion">
             <div class="card">
                 <div class="card-header">
-                    <a class="card-link" data-toggle="collapse" href="#collapseService">Choose a service</a>
+                    <a class="card-link" data-toggle="collapse" href="#collapseService">
+                    <img src="check.png" alt="logo" style="width:30px;">Choose a Service</a>
                 </div>
                 <div id="collapseService" class="collapse show" data-parent="#accordion">
                     <div class="card-body">
-                            <div class="container">
+                        <div class="container">
                             <h2>Haircut Services!</h2>
-                            <p>Here is a small selection of what we can do:</p>            
-                            <table class="table table-active table-hover">
-                                <thead>
-                                <tr>
-                                    <th>Service</th>
-                                    <th>Description</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>Haircut</td>
-                                    <td>Need to take a few inches off of your hair? Got some split ends? We can chop em off!</td>
-                                </tr>
-                                <tr>
-                                    <td>Drying</td>
-                                    <td>If you get caught in the rain, or just get out of the shower and get lazy? We can dry your hair lickity-split.</td>
-                                </tr>
-                                <tr>
-                                    <td>Coloring</td>
-                                    <td>Get in touch with Zayn to change the color of your hair to match your mood.</td>
-                                </tr>
-                                </tbody>
-                            </table>
+                            <p>Please select a service you would like:</p>
+                            <input type="radio" id="haircut" name="service" value="Haircut">
+                            <label for="male">Haircut</label><br>
+                            <input type="radio" id="drying" name="service" value="Drying">
+                            <label for="male">Drying</label><br>
+                            <input type="radio" id="color" name="service" value="Coloring">
+                            <label for="male">Coloring</label><br>
                         </div>
                     </div>
                 </div>
             <div class="card">
                 <div class="card-header">
-                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choose a date</a>
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseHairdresser">
+                    <img src="hair-dryer.png" alt="logo" style="width:30px;">Choose a Hairdresser</a>
+                </div>
+                <div id="collapseHairdresser" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>Please select who you would like to work on your hair:</p>
+                        <input type="radio" id="harry" name="hairdresser" value="Harry Styles">
+                        <label for="male">Harry Styles</label><br>
+                        <input type="radio" id="niall" name="hairdresser" value="Niall Horan">
+                        <label for="male">Niall Horan</label><br>
+                        <input type="radio" id="zayn" name="hairdresser" value="Zayn Malik">
+                        <label for="male">Zayn Malik</label><br>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">
+                    <img src="calendar.png" alt="logo" style="width:30px;">Choose a Date</a>
                 </div>
                 <div id="collapseDate" class="collapse" data-parent="#accordion">
                     <div class="card-body">
@@ -139,17 +174,16 @@
                         <!-- Bootstrap has various input components. Some examples are given here: -->
                         <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
                         <div class="form-group row">
-                            <label for="dateTimeInput" class="col-2 col-form-label">Date and time</label>
-                            <div class="col-10">
-                                <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="dateTimeInput">
-                            </div>
+                            <label for="datepicker" class="col-2 col-form-label">Choose a date:</label>
+                            <input type="text" id="datepicker">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="card">
                 <div class="card-header">
-                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Your info</a>
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">
+                    <img src="credit-card.png" alt="logo" style="width:30px;">Your Contact and Payment Info</a>
                 </div>
                 <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
                     <div class="card-body">
@@ -159,11 +193,9 @@
                             <input type="text" id="fname" name="fname"><br>
                             <label for="lname">Last name:</label><br>
                             <input type="text" id="lname" name="lname"><br><br>
-                            <label for="lname">Email address:</label>
-                            <input type="text" id="email" name="email"><br><br>
-                            <label for="lname">Phone Number:</label>
+                            <label for="phone">Phone Number:</label>
                             <input type="text" id="phone" name="phone" size="14" placeholder="XXX-XXX-XXXX"><br><br>
-                            <label for="lname">Credit Card Number:</label>
+                            <label for="cc">Credit Card Number:</label>
                             <input 
                                 type="text" 
                                 id="creditCard" 
@@ -173,13 +205,14 @@
                                 data-toggle="tooltip"
                                 data-placement="right"
                                 title="This is for the cancelation fee of 15$."><br>
-                            <input type="submit" value="Book" onclick="checkInputs()">
+                            <input type="submit" id="book" value="Book">
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</body>
+
+</body><br><br>
 <footer>Designed by Maxim Karpov</footer>
 </html>
