@@ -55,7 +55,7 @@ module.exports = function(app){
         res.sendFile(__dirname+'/views/niceSurvey.html');
     });
 
-    // when a user types SUBMIT in localhost:3000/niceSurvey 
+    // when a user types SUBMIT in localhost:3000/niceSurvey
     // the action.js code will POST, and what is sent in the POST
     // will be recuperated here, parsed and used to update the data files
     app.post('/niceSurvey', urlencodedParser, function(req, res){
@@ -77,6 +77,6 @@ module.exports = function(app){
         // if anyone can figure this out, let me know!
         res.sendFile(__dirname + "/views/niceSurvey.html");
     });
-    
+
 
 };
