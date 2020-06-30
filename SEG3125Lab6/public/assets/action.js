@@ -2,7 +2,7 @@
 $(document).ready(function(){
 
   $('form').on('submit', function(){
-      
+
       // var item = $('form input');
       // console.log(item.serializeArray());
 
@@ -13,7 +13,7 @@ $(document).ready(function(){
         success: function(data){
           // do something with the data via front-end framework
           // Make the submit button red, disabled and saying Thank you
-          $("#bb").css("background-color", "white");
+          $("#bb").css("background-color", "grey");
           $("#bb").prop("disabled", "true");
           $("#bb").text("Thank you!");
         }

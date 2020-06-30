@@ -12,6 +12,7 @@ app.set('view engine', 'ejs');
 
 // static file serving
 app.use(express.static('./public'));
+app.use(express.static('publicDir'));
 
 // fire function from surveyController
 surveyController(app);
