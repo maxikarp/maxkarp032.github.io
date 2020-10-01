@@ -7,7 +7,7 @@ var products = [
 		vegetarian: true,
 		glutenFree: true,
 		price: 1.99,
-		pic:"/foodAssets/Brocoli.jpg",
+		pic:"foodAssets/Brocoli.jpg",
 		isOrganic: true
 	},
 	{
@@ -15,7 +15,7 @@ var products = [
 		vegetarian: true,
 		glutenFree: false,
 		price: 2.35,
-		pic:"/foodAssets/Bread.jpg",
+		pic:"foodAssets/Bread.jpg",
 		isOrganic: false
 	},
 	{
@@ -23,7 +23,7 @@ var products = [
 		vegetarian: false,
 		glutenFree: true,
 		price: 10.00,
-		pic:"/foodAssets/Salmon.jpg",
+		pic:"foodAssets/Salmon.jpg",
 		isOrganic: true
 	},
 	{
@@ -31,7 +31,7 @@ var products = [
 		vegetarian: false,
 		glutenFree: true,
 		price: 13.00,
-		pic:"/foodAssets/Steak.jpg",
+		pic:"foodAssets/Steak.jpg",
 		isOrganic: false
 	},
 	{
@@ -39,7 +39,7 @@ var products = [
 		vegetarian: true,
 		glutenFree: true,
 		price: 1.00,
-		pic:"/foodAssets/Tomato.jpg",
+		pic:"foodAssets/Tomato.jpg",
 		isOrganic: true
 	},
 	{
@@ -47,7 +47,7 @@ var products = [
 		vegetarian: true,
 		glutenFree: false,
 		price: 0.50,
-		pic:"/foodAssets/Bagel.jpg",
+		pic:"foodAssets/Bagel.jpg",
 		isOrganic: false
 	},
 	{
@@ -55,7 +55,7 @@ var products = [
 		vegetarian: true,
 		glutenFree: true,
 		price: 3.00,
-		pic:"/foodAssets/CreamCheese.jpg",
+		pic:"foodAssets/CreamCheese.jpg",
 		isOrganic: false
 	},
 	{
@@ -63,7 +63,7 @@ var products = [
 		vegetarian: true,
 		glutenFree: true,
 		price: 6.00,
-		pic:"/foodAssets/Rice.jpg",
+		pic:"foodAssets/Rice.jpg",
 		isOrganic: false
 	},
 	{
@@ -71,7 +71,7 @@ var products = [
 		vegetarian: true,
 		glutenFree: false,
 		price: 6.00,
-		pic:"/foodAssets/Pasta.jpg",
+		pic:"foodAssets/Pasta.jpg",
 		isOrganic: false
 	},
 	{
@@ -79,7 +79,7 @@ var products = [
 		vegetarian: true,
 		glutenFree: true,
 		price: 0.89,
-		pic:"/foodAssets/Banana.jpg",
+		pic:"foodAssets/Banana.jpg",
 		isOrganic: true
 	}
 ];
