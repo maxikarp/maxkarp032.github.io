@@ -2,10 +2,35 @@
 /* Style sheet
    color picker www.w3schools.com/colors/colors_picker.asp
 */
+body{
+  margin: 0px;
+}
+
+#nav li{
+  list-style: none;
+  display: inline;
+  float: left;
+}
+a{
+  display: block;
+  border: 10px;
+  padding: 10px;
+}
+
+header{
+  background-color: #E9C46A;
+
+}
 
 /* Bootstrap default font-family is Helvetica Neue */
 h1 {
   font-family: Futura, Arial, serif;
+  color: ;
   text-shadow: 3px 3px 1px black;
   
+}
+
+#contactList li{
+  list-style: none;
+  display: inline;
 }
