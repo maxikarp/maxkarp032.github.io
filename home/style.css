@@ -8,29 +8,54 @@
   box-sizing: border-box;
 }
 
-.header{
-  text-align: center;
-  background-color: #E9C46A;
+p{
+  font-family: "Fraunces";
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 50px;
+  font-family: Futura, Arial, serif;
+  color: #4D6017;
+  text-shadow: 3px 3px 1px #ce9b1f
+}
+
+h2{
+  font-family: Futura, Arial, serif;
+  color: #4D6017;
 }
 
 nav{
-  font-family: "Fraunces";
-  display: grid;
-  grid-template-columns: 10% 1fr 1fr 1fr 10%;
-  min-height: 5vh;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
-  justify-items: center;
-  background-color: #E9C46A;
+  min-height: 5vh;
+  padding: 10px 0px 25px 0px;
+  background-color: #EEBE8A;
+  font-family: "Fraunces";
 }
 
-#aboutMeNav{
-  grid-column: 2/3;
+.logo{
+  color: #4D6017;
+  letter-spacing: 5px;
 }
-#projectsNav{
-  grid-column: 3/4;
+
+.nav-links{
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
 }
-#contactMeNav{
-  grid-column: 4/5;
+
+.nav-links li{
+  list-style: none;
+}
+
+.nav-links a{
+  color: #4D6017;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 #me{
@@ -38,29 +63,17 @@ nav{
   width: 100%;
 }
 
-
-#navigation li{
-
-  list-style: none;
-  display: inline;
-  float: left;
+.imgTextSection{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-items: center;
+  align-items: center;
+  background-color: #EEBE8A;
 }
 
-.generalText{
-  font-family: "Fraunces";
+.aboutText{
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 
-
-/* Bootstrap default font-family is Helvetica Neue */
-h1 {
-  font-size: 50px;
-  font-family: Futura, Arial, serif;
-  color: #2A9D8F;
-  text-shadow: 3px 3px 1px #ce9b1f
-}
-
-#contactList li{
-  list-style: none;
-  display: inline;
-}
