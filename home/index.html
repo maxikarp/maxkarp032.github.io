@@ -1,9 +1,3 @@
-<!-- This file contains many elements adapted from the online tutoral -->
-<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
-
-<!-- Images source: -->
-<!-- icons for last section provided by my classmate skyla -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fraunces">
 </head>
 
 
@@ -20,20 +15,19 @@
 
     <div class="header">
         <h1>Maxim Karpov</h1>
-        <p>uOttawa Student - Aspiring Web Developper - uOttawa DSC Social Media Man</p>
+        <p class="generalText">uOttawa Student - Aspiring Web Developper - uOttawa DSC Social Media Man</p>
     </div>
 
     <nav>
-        <ul id="nav">
-            <li><a>About Me</a></li>
-            <li><a>Projects</a></li>
-            <li><a>Contact Me</a></li>
-        </ul>
+        <a id="aboutMeNav" href="#">About Me</a>
+        <a id="projectsNav" href="#">Projects</a>
+        <a id="contactMeNav" href="#">Contact Me</a>
     </nav>
 
     <div id="myPic">
-        <img src="images/me.JPG">
+        <img id="me" src="images/me.JPG">
     </div>
+
 
 
     <!-- When you have messages to tell, remember that center align is not always the best choice -->

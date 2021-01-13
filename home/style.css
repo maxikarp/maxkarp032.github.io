@@ -2,32 +2,62 @@
 /* Style sheet
    color picker www.w3schools.com/colors/colors_picker.asp
 */
-body{
-  margin: 0px;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#nav li{
+.header{
+  text-align: center;
+  background-color: #E9C46A;
+}
+
+nav{
+  font-family: "Fraunces";
+  display: grid;
+  grid-template-columns: 10% 1fr 1fr 1fr 10%;
+  min-height: 5vh;
+  align-items: center;
+  justify-items: center;
+  background-color: #E9C46A;
+}
+
+#aboutMeNav{
+  grid-column: 2/3;
+}
+#projectsNav{
+  grid-column: 3/4;
+}
+#contactMeNav{
+  grid-column: 4/5;
+}
+
+#me{
+  height: 100%;
+  width: 100%;
+}
+
+
+#navigation li{
+
   list-style: none;
   display: inline;
   float: left;
 }
-a{
-  display: block;
-  border: 10px;
-  padding: 10px;
+
+.generalText{
+  font-family: "Fraunces";
 }
 
-header{
-  background-color: #E9C46A;
 
-}
 
 /* Bootstrap default font-family is Helvetica Neue */
 h1 {
+  font-size: 50px;
   font-family: Futura, Arial, serif;
-  color: ;
-  text-shadow: 3px 3px 1px black;
-  
+  color: #2A9D8F;
+  text-shadow: 3px 3px 1px #ce9b1f
 }
 
 #contactList li{
